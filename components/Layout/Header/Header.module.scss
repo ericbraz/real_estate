@@ -1,0 +1,7 @@
+@import '../../../styles/mixins';
+
+.header {
+   padding: 0;
+   @include layout;
+}
+
