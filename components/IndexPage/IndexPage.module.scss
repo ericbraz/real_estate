@@ -1,0 +1,48 @@
+.allDivs {
+   height: fit-content;
+}
+
+.mainDiv {
+   .topDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 65vw;
+
+      .leftDiv,
+      .rightDiv {
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+
+         h1,
+         h2,
+         h3,
+         h4,
+         h5,
+         h6,
+         div,
+         p {
+            margin: 0.625rem 1.25rem;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            div,
+            p {
+               margin: 0;
+            }
+         }
+      }
+      .leftDiv {
+         align-items: flex-start;
+      }
+      .rightDiv {
+         align-items: flex-end;
+      }
+   }
+}
