@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { Fragment } from 'react'
 import { MENU_ITEMS } from '../../constants/topMenu'
 import styles from './Menu.module.scss'
 
@@ -14,9 +14,11 @@ const Menu = (props: Props) => {
       <nav className={menuStyle.header}>
          <ul className={styles.menu}>
             {MENU_ITEMS.map((menu) => (
-               <Link href={`#${menu.id}`}>
-                  <li key={menu.name}>{menu.name}</li>
-               </Link>
+               <Fragment key={menu.name}>
+                  <Link href={`#${menu.id}`}>
+                     <li>{menu.name}</li>
+                  </Link>
+               </Fragment>
             ))}
          </ul>
       </nav>
