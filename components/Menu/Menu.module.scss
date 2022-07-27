@@ -1,6 +1,7 @@
 @import '../../styles/mixins';
 
 .menu {
+   position: fixed;
    padding: 2rem 20rem;
    display: flex;
    align-items: center;
