@@ -1,0 +1,64 @@
+@import '../../../styles/mixins';
+
+.outerCardDiv:hover {
+   transform: scale(1.05);
+}
+
+.outerCardDiv {
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-end;
+   background-size: cover;
+   border-radius: $border;
+   color: $color4;
+   cursor: pointer;
+   padding: 0;
+   margin: 1rem;
+   width: $size;
+   height: $size * 4/3;
+
+   box-shadow: 3px 3px 5px rgba(94, 104, 121, 0.588);
+   transition: transform 0.8s ease;
+
+   .content {
+      @include rgbaGradient1(180deg);
+      border-bottom-left-radius: $border;
+      border-bottom-right-radius: $border;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      font-weight: 600;
+      padding: 0.5rem 0.75rem;
+      width: $size;
+      height: 35%;
+      min-height: 35%;
+
+      transition: height 0.8s ease-in-out;
+
+      div {
+         display: block;
+
+         .title {
+            font-size: x-large;
+         }
+
+         .desc {
+            opacity: 0;
+            transition: opacity 0.5s ease-in 0.5s;
+         }
+      }
+   }
+}
+
+.outerCardDiv:hover {
+   .content {
+      height: 100%;
+
+      div {
+         .desc {
+            opacity: 100;
+            height: 100%;
+         }
+      }
+   }
+}

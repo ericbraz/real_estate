@@ -11,3 +11,34 @@ $color5: #a6b2ec;
    justify-content: flex-start;
    align-items: center;
 }
+
+/* ImageGalleryCard variables */
+$border: 12px;
+$size: 300px;
+@mixin rgbaGradient1($grad) {
+   background: rgb(8, 12, 37); /* rgb(8, 12, 37); */
+   background: linear-gradient(
+      $grad,
+      rgba(8, 12, 37, 0) 0%,
+      rgba(8, 12, 37, 0.5) 35%,
+      rgba(8, 12, 37, 1) 100%
+   );
+}
+@mixin rgbaGradient2($grad) {
+   background: rgb(48, 113, 231);
+   background: linear-gradient(
+      $grad,
+      rgba(48, 113, 231, 0) 0%,
+      rgba(48, 113, 231, 0.5) 35%,
+      rgba(48, 113, 231, 1) 100%
+   );
+}
+@mixin rgbaGradient3($grad) {
+   background: rgb(166, 178, 236);
+   background: linear-gradient(
+      $grad,
+      rgba(166, 178, 236, 0) 0%,
+      rgba(166, 178, 236, 0.5) 35%,
+      rgba(166, 178, 236, 1) 100%
+   );
+}
