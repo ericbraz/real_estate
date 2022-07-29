@@ -3,28 +3,28 @@
 }
 
 .mainDiv {
-   .topDiv {
+   align-items: center;
+   justify-content: center;
+
+   .outerTopDiv {
       display: flex;
-      flex-direction: row;
       align-items: center;
       justify-content: center;
-      width: 65vw;
+      width: 100%;
 
-      .leftDiv,
-      .rightDiv {
+      .innerTopDiv {
          display: flex;
-         flex-direction: column;
-         width: 100%;
+         flex-direction: row;
+         align-items: center;
+         justify-content: center;
+         min-height: 80vh;
+         min-width: 65vw;
 
-         h1,
-         h2,
-         h3,
-         h4,
-         h5,
-         h6,
-         div,
-         p {
-            margin: 0.625rem 1.25rem;
+         .leftDiv,
+         .rightDiv {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
 
             h1,
             h2,
@@ -34,15 +34,27 @@
             h6,
             div,
             p {
-               margin: 0;
+               color: whitesmoke;
+               margin: 0.625rem 1.25rem;
+
+               h1,
+               h2,
+               h3,
+               h4,
+               h5,
+               h6,
+               div,
+               p {
+                  margin: 0;
+               }
             }
          }
-      }
-      .leftDiv {
-         align-items: flex-start;
-      }
-      .rightDiv {
-         align-items: flex-end;
+         .leftDiv {
+            align-items: flex-start;
+         }
+         .rightDiv {
+            align-items: flex-end;
+         }
       }
    }
 }
