@@ -3,24 +3,18 @@ import styles from './ImageGalleryCard.module.scss'
 
 interface Props {
    imgPath: string
-   id: string
    title: string
    desc?: string
    size?: number
    viz?: boolean
-   modal?: boolean
-   setModal?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 function ImageCard(props: Props) {
-   const { imgPath, id, title, desc, size, viz, modal, setModal } = props
+   const { imgPath, title, desc, size, viz } = props
 
    const realSize = size !== undefined && size < 200 ? 200 : size
 
    const visible = viz === undefined ? true : viz
-
-   //const expansion = modal === undefined ? false : modal
-   //const setExpansion = setModal === undefined ? () => {} : setModal
 
    return (
       <div className={styles.outerCardDiv}>

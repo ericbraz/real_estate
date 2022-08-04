@@ -13,9 +13,6 @@ function GallerySection() {
    const path = IMAGES_GALLERY_PATH
    const images = IMAGES_GALLERY
    const length = images.length
-   if (!Array.isArray(images) || length < 3) {
-      return null
-   }
 
    /* removable */
    const [myText, setMyText] = useState('')
@@ -31,12 +28,16 @@ function GallerySection() {
 
       /* removable */
       setMyText(randomText())
-   }, [])
+   })
 
    /* removable */
    function changeElementStateAndText(index: number) {
       changeElementState(index)
       setMyText(randomText())
+   }
+
+   if (!Array.isArray(images) || length < 3) {
+      return null
    }
 
    return (
@@ -46,7 +47,6 @@ function GallerySection() {
                <div id={`sliderSpan${image.id}`} onClick={() => changeElementState(idx)}>
                   <ImageGalleryCard
                      imgPath={`${path}/${image.file}`}
-                     id={image.id}
                      title={image.title}
                      desc={image.description}
                      size={300}
@@ -77,7 +77,7 @@ function GallerySection() {
                               <h3>{image.sum_title}</h3>
                               <ul>
                                  {image.summary.map((sum) => (
-                                    <li>{sum}</li>
+                                    <li key={sum}>{sum}</li>
                                  ))}
                               </ul>
                            </div>
