@@ -14,25 +14,29 @@ function ImageCard(props: Props) {
 
    const realSize = size !== undefined && size < 200 ? 200 : size
 
+   const visible = viz === undefined ? true : viz
+
    return (
-      <div
-         className={`${styles.outerCardDiv}`}
-         style={
-            viz
-               ? realSize !== undefined
-                  ? {
-                       backgroundImage: `url(${imgPath})`,
-                       width: realSize,
-                       height: (realSize * 4) / 3,
-                    }
-                  : { backgroundImage: `url(${imgPath})` }
-               : { display: 'none' }
-         }
-      >
-         <div className={styles.content} style={realSize ? { width: realSize } : {}}>
-            <div>
-               {desc !== undefined && <p className={`${styles.desc}`}> {desc} </p>}
-               <h3 className={`${styles.title}`}> {title} </h3>
+      <div className={styles.outerCardDiv}>
+         <div
+            className={`${styles.innerCardDiv}`}
+            style={
+               visible
+                  ? realSize !== undefined
+                     ? {
+                          backgroundImage: `url(${imgPath})`,
+                          width: realSize,
+                          height: (realSize * 4) / 3,
+                       }
+                     : { backgroundImage: `url(${imgPath})` }
+                  : { display: 'none' }
+            }
+         >
+            <div className={styles.content} style={realSize ? { width: realSize } : {}}>
+               <div>
+                  {desc !== undefined && <p className={`${styles.desc}`}> {desc} </p>}
+                  <h3 className={`${styles.title}`}> {title} </h3>
+               </div>
             </div>
          </div>
       </div>

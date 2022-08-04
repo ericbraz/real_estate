@@ -4,60 +4,68 @@
    transform: scale(1.05);
 }
 
-.outerCardDiv {
-   display: flex;
-   align-items: flex-end;
-   justify-content: flex-end;
-   background-size: cover;
-   border-radius: $border;
-   color: $color4;
-   cursor: pointer;
-   padding: 0;
-   margin: 1rem;
-   width: $size;
-   height: $size * 4/3;
+.innerCardDiv:hover {
+   transform: rotate(-2deg);
+}
 
-   box-shadow: 3px 3px 5px rgba(94, 104, 121, 0.588);
+.outerCardDiv {
    transition: transform 0.8s ease;
 
-   .content {
-      @include rgbaGradient1(180deg);
-      border-bottom-left-radius: $border;
-      border-bottom-right-radius: $border;
+   .innerCardDiv {
       display: flex;
       align-items: flex-end;
-      justify-content: flex-start;
-      font-weight: 600;
-      padding: 0.5rem 0.75rem;
+      justify-content: flex-end;
+      background-size: cover;
+      border-radius: $border;
+      color: $color4;
+      cursor: pointer;
+      padding: 0;
+      margin: 1rem;
       width: $size;
-      height: 35%;
-      min-height: 35%;
+      height: $size * 4/3;
 
-      transition: height 0.8s ease-in-out;
+      box-shadow: 3px 3px 5px rgba(94, 104, 121, 0.588);
+      transition: transform 0.8s ease;
 
-      div {
-         display: block;
+      .content {
+         @include rgbaGradient1(180deg);
+         border-bottom-left-radius: $border;
+         border-bottom-right-radius: $border;
+         display: flex;
+         align-items: flex-end;
+         justify-content: flex-start;
+         font-weight: 600;
+         padding: 0.5rem 0.75rem;
+         width: $size;
+         height: 35%;
+         min-height: 35%;
 
-         .title {
-            font-size: x-large;
-         }
+         transition: height 0.8s ease-in-out;
 
-         .desc {
-            opacity: 0;
-            transition: opacity 0.5s ease-in 0.5s;
+         div {
+            display: block;
+
+            .title {
+               font-size: x-large;
+            }
+
+            .desc {
+               opacity: 0;
+               transition: opacity 0.5s ease-in 0.5s;
+            }
          }
       }
    }
-}
 
-.outerCardDiv:hover {
-   .content {
-      height: 100%;
+   .innerCardDiv:hover {
+      .content {
+         height: 100%;
 
-      div {
-         .desc {
-            opacity: 100;
-            height: 100%;
+         div {
+            .desc {
+               opacity: 100;
+               height: 100%;
+            }
          }
       }
    }

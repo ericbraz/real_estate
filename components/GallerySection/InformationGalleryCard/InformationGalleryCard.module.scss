@@ -1,0 +1,29 @@
+@import '../../../styles/mixins';
+
+.content {
+   display: flex;
+   flex-direction: row;
+
+   div {
+      flex: 50%;
+   }
+
+   .left {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      border-bottom-left-radius: $modal-border-radius;
+      border-top-left-radius: $modal-border-radius;
+      width: 100%;
+   }
+
+   .right {
+      border-bottom-right-radius: $modal-border-radius;
+      border-top-right-radius: $modal-border-radius;
+
+      div {
+         padding: 2rem;
+         height: 100%;
+      }
+   }
+}
