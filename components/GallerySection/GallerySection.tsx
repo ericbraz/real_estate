@@ -28,7 +28,7 @@ function GallerySection() {
 
       /* removable */
       setMyText(randomText())
-   })
+   }, [])
 
    /* removable */
    function changeElementStateAndText(index: number) {
