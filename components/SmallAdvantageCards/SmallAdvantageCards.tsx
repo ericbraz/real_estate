@@ -30,7 +30,7 @@ function SmallAdvantageCards() {
    return (
       <>
          {advantages.map((advantage) => (
-            <div className={`${styles.card} ${styles.darkBackground}`}>
+            <div key={advantage.title} className={`${styles.card} ${styles.darkBackground}`}>
                <div className={styles.content}>
                   <div className={styles.icon}>{advantage.icon}</div>
                   <p className={styles.text}>{advantage.description}</p>
