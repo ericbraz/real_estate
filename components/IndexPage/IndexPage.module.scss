@@ -1,4 +1,6 @@
 .allDivs {
+   display: block;
+   margin-bottom: 300px;
    height: fit-content;
 }
 
@@ -56,5 +58,11 @@
             align-items: flex-end;
          }
       }
+   }
+
+   .advantageCards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
    }
 }
