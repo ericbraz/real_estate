@@ -1,6 +1,7 @@
 import React from 'react'
 import { MENU_ITEMS } from '../../constants/topMenu'
 import GallerySection from '../GallerySection'
+import SmallAdvantageCards from '../SmallAdvantageCards'
 import styles from './IndexPage.module.scss'
 
 function IndexPage() {
@@ -19,10 +20,12 @@ function IndexPage() {
                   <div className={styles.rightDiv}></div>
                </div>
             </div>
-            <div id={t2.id} className={`${styles.allDivs}`}>
+            <div id={t2.id} className={`${styles.allDivs} ${styles.advantageCards}`}>
+               <SmallAdvantageCards />
+            </div>
+            <div id={t3.id} className={`${styles.allDivs}`}>
                <GallerySection />
             </div>
-            <div id={t3.id} className={`${styles.allDivs}`}></div>
             <div id={t4.id} className={`${styles.allDivs}`}></div>
          </div>
       </>
