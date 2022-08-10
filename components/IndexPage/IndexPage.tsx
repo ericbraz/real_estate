@@ -1,5 +1,6 @@
 import React from 'react'
 import { MENU_ITEMS } from '../../constants/topMenu'
+import FirstFold from '../FirstFold'
 import GallerySection from '../GallerySection'
 import SmallAdvantageCards from '../SmallAdvantageCards'
 import styles from './IndexPage.module.scss'
@@ -9,17 +10,12 @@ function IndexPage() {
 
    return (
       <>
-         <div id={t1.id} style={{ position: 'absolute', top: 0 }}></div>
+         <div id={t1.id} className={styles.background} style={{ position: 'absolute', top: 0 }}>
+            <div className={styles.left}></div>
+            <div className={styles.right}></div>
+         </div>
          <div className={`${styles.mainDiv} ${styles.allDivs}`}>
-            <div className={`${styles.outerTopDiv}`}>
-               <div className={styles.innerTopDiv}>
-                  <div className={styles.leftDiv}>
-                     <h1>Conheça a Casa dos Sonhos</h1>
-                     <h3>AEJ Incorporadora</h3>
-                  </div>
-                  <div className={styles.rightDiv}></div>
-               </div>
-            </div>
+            <FirstFold />
             <div id={t2.id} className={`${styles.allDivs} ${styles.advantageCards}`}>
                <SmallAdvantageCards />
             </div>

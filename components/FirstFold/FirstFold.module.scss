@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree&family=Philosopher&display=swap');
+@import '../../styles/mixins';
+
+.outerTopDiv {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100vw;
+   z-index: 50;
+
+   .innerTopDiv {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-evenly;
+      width: 100vw;
+      min-height: 80vh;
+
+      .leftDiv,
+      .rightDiv {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         margin-top: 5rem;
+         width: 33%;
+         z-index: 150;
+
+         h1,
+         h2,
+         h3,
+         h4,
+         h5,
+         h6,
+         div,
+         p {
+            color: $color4;
+            margin: 0.625rem 1.25rem;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            div,
+            p {
+               margin: 0;
+            }
+         }
+      }
+      .leftDiv {
+         align-items: flex-start;
+      }
+      .rightDiv {
+         align-items: stretch;
+
+         .rightContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+
+            .upperContent,
+            .bottomContent {
+               display: flex;
+               height: 50%;
+            }
+
+            h1 {
+               display: flex;
+               font-weight: 300;
+            }
+
+            .upperContent {
+               flex-direction: column;
+               justify-content: space-evenly;
+               font-family: 'Philosopher', sans-serif;
+               font-size: 28px;
+
+               h1 {
+                  display: block;
+               }
+            }
+            .upperContent::after {
+               content: '';
+               border: 1px solid gray;
+               width: 100%;
+            }
+
+            .bottomContent {
+               align-items: center;
+               font-family: 'Figtree', sans-serif;
+
+               div {
+                  padding: 1.5rem;
+                  width: 50%;
+                  height: 90%;
+
+                  h3,
+                  p,
+                  span {
+                     padding: 0.5em 0;
+                  }
+
+                  h3 {
+                     color: $color5;
+                     letter-spacing: 0.05em;
+                     font-size: xx-large;
+                     font-weight: 700;
+                  }
+
+                  p {
+                     color: lightgray;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@keyframes bounce {
+   20%,
+   50%,
+   80%,
+   to {
+      transform: translateY(5px);
+   }
+   40% {
+      transform: translateY(15px);
+   }
+   70% {
+      transform: translateY(10px);
+   }
+   90% {
+      transform: translateY(7px);
+   }
+}
+
+.arrowSection {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   z-index: 160;
+
+   .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color3;
+      border: 10px solid whitesmoke;
+      border-radius: 50%;
+      color: $color4;
+      cursor: pointer;
+      font-size: 60px;
+      width: 120px;
+      height: 120px;
+
+      span {
+         transform: translateY(5px);
+      }
+      span.bouncer {
+         animation: bounce 2s ease-in-out;
+      }
+   }
+
+   /* .arrow::before,
+   .arrow::after {
+      content: '';
+      background: whitesmoke;
+      width: 2rem;
+      height: 2rem;
+      background-color: transparent;
+   }
+   .arrow::before {
+      box-shadow: 0 -10px 0 0 whitesmoke;
+      border-top-right-radius: 100px;
+   }
+   .arrow::after {
+      box-shadow: -10px 0 0 0 whitesmoke;
+      border-bottom-left-radius: 100px;
+   } */
+}
