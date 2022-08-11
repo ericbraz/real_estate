@@ -10,7 +10,6 @@
    justify-content: center;
    width: 100vw;
    height: 100vh;
-   z-index: 300;
 
    transform: display 0.8s ease 1s;
 
@@ -18,7 +17,6 @@
       position: relative;
       border-radius: $modal-border-radius;
       display: block;
-      z-index: 100;
 
       .content {
          background-color: whitesmoke;
@@ -32,7 +30,6 @@
       position: relative;
       display: flex;
       justify-content: flex-end;
-      z-index: 101;
       width: 100%;
    }
 }

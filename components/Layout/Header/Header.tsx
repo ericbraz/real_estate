@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import styles from './Header.module.scss'
-import Menu from '../../Menu/Menu'
+import Menu from '../../Menu'
 
 function LayoutHead() {
    return (

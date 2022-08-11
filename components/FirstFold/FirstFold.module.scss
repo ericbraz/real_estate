@@ -7,7 +7,6 @@
    align-items: center;
    justify-content: center;
    width: 100vw;
-   z-index: 50;
 
    .innerTopDiv {
       display: flex;
@@ -24,7 +23,6 @@
          flex-direction: column;
          margin-top: 5rem;
          width: 33%;
-         z-index: 150;
 
          h1,
          h2,
@@ -144,7 +142,6 @@
    align-items: center;
    justify-content: center;
    width: 100%;
-   z-index: 160;
 
    .arrow {
       display: flex;
@@ -166,21 +163,4 @@
          animation: bounce 2s ease-in-out;
       }
    }
-
-   /* .arrow::before,
-   .arrow::after {
-      content: '';
-      background: whitesmoke;
-      width: 2rem;
-      height: 2rem;
-      background-color: transparent;
-   }
-   .arrow::before {
-      box-shadow: 0 -10px 0 0 whitesmoke;
-      border-top-right-radius: 100px;
-   }
-   .arrow::after {
-      box-shadow: -10px 0 0 0 whitesmoke;
-      border-bottom-left-radius: 100px;
-   } */
 }
