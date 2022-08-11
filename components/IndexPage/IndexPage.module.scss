@@ -1,6 +1,111 @@
+@import '../../styles/mixins';
+
+@mixin bgPattern {
+   background-color: no-repeat;
+   background-size: contain;
+}
+
+@mixin bgPatternCover {
+   background-color: no-repeat;
+   background-size: cover;
+}
+
+@keyframes changeBg {
+   0%,
+   100% {
+      background-image: url('/assets/top-backgrounds/pexels-kaique-rocha-65781.jpg');
+   }
+   5% {
+      background-image: url('/assets/top-backgrounds/pexels-kaique-rocha-65781.jpg');
+   }
+   10% {
+      background-image: url('/assets/top-backgrounds/pexels-kaique-rocha-65781.jpg');
+   }
+   15% {
+      background-image: url('/assets/top-backgrounds/pexels-kaique-rocha-65781.jpg');
+   }
+   20% {
+      background-image: url('/assets/top-backgrounds/pexels-curtis-adams-3935333.jpg');
+   }
+   25% {
+      background-image: url('/assets/top-backgrounds/pexels-curtis-adams-3935333.jpg');
+   }
+   30% {
+      background-image: url('/assets/top-backgrounds/pexels-curtis-adams-3935333.jpg');
+   }
+   35% {
+      background-image: url('/assets/top-backgrounds/pexels-curtis-adams-3935333.jpg');
+   }
+   40% {
+      background-image: url('/assets/top-backgrounds/pexels-vecislavas-popa-1571470.jpg');
+   }
+   45% {
+      background-image: url('/assets/top-backgrounds/pexels-vecislavas-popa-1571470.jpg');
+   }
+   50% {
+      background-image: url('/assets/top-backgrounds/pexels-vecislavas-popa-1571470.jpg');
+   }
+   55% {
+      background-image: url('/assets/top-backgrounds/pexels-vecislavas-popa-1571470.jpg');
+   }
+   60% {
+      background-image: url('/assets/top-backgrounds/pexels-binyamin-mellish-1396122.jpg');
+   }
+   65% {
+      background-image: url('/assets/top-backgrounds/pexels-binyamin-mellish-1396122.jpg');
+   }
+   70% {
+      background-image: url('/assets/top-backgrounds/pexels-binyamin-mellish-1396122.jpg');
+   }
+   75% {
+      background-image: url('/assets/top-backgrounds/pexels-binyamin-mellish-1396122.jpg');
+   }
+   80% {
+      background-image: url('/assets/top-backgrounds/pexels-tamil-king-3214064.jpg');
+   }
+   85% {
+      background-image: url('/assets/top-backgrounds/pexels-tamil-king-3214064.jpg');
+   }
+   90% {
+      background-image: url('/assets/top-backgrounds/pexels-tamil-king-3214064.jpg');
+   }
+   95% {
+      background-image: url('/assets/top-backgrounds/pexels-tamil-king-3214064.jpg');
+   }
+}
+
+@media screen and (max-width: 1370px) {
+   .background {
+      @include bgPatternCover();
+   }
+}
+
+.background {
+   @include bgPattern();
+   animation: changeBg 120s infinite;
+   animation-timing-function: linear;
+   display: flex;
+   width: 100%;
+   height: 93vh;
+   z-index: 0;
+
+   .left,
+   .right {
+      min-height: 85vh;
+      width: 50vw;
+      z-index: 1;
+   }
+
+   .right {
+      background: rgb(50, 67, 119);
+      background: linear-gradient(210deg, #163628, #161e35);
+   }
+}
+
 .allDivs {
    display: block;
-   margin-bottom: 300px;
+   padding-bottom: 300px;
+   width: 100%;
    height: fit-content;
 }
 
@@ -8,61 +113,11 @@
    align-items: center;
    justify-content: center;
 
-   .outerTopDiv {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-
-      .innerTopDiv {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         justify-content: center;
-         min-height: 80vh;
-         min-width: 65vw;
-
-         .leftDiv,
-         .rightDiv {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6,
-            div,
-            p {
-               color: whitesmoke;
-               margin: 0.625rem 1.25rem;
-
-               h1,
-               h2,
-               h3,
-               h4,
-               h5,
-               h6,
-               div,
-               p {
-                  margin: 0;
-               }
-            }
-         }
-         .leftDiv {
-            align-items: flex-start;
-         }
-         .rightDiv {
-            align-items: flex-end;
-         }
-      }
-   }
-
    .advantageCards {
+      background-color: whitesmoke;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-wrap: nowrap;
+      justify-content: center;
+      padding-top: 100px;
    }
 }

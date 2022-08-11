@@ -9,8 +9,10 @@
    flex-direction: row;
    width: 100%;
 
+   z-index: 52;
+
    li {
-      color: $color1;
+      color: $color4;
       cursor: pointer;
       font-weight: 600;
       display: block;
@@ -19,7 +21,7 @@
       padding: 0.5rem 1.2rem;
    }
    li:hover {
-      background-color: $color3;
-      color: $color4;
+      background-color: $color5;
+      color: $color2;
    }
 }
