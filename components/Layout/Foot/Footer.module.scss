@@ -1,6 +1,63 @@
 @import '../../../styles/mixins';
 
+$padding: 1.5rem;
+$width: 100vw;
+
 .footer {
-   padding: 5rem 0;
+   background-color: #1f2024;
+   color: $color4;
+   padding: 0;
    @include layout;
+
+   p {
+      margin: 0.4rem 4rem;
+   }
+
+   .container {
+      padding: $padding;
+      width: $width;
+
+      p {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+
+         > div {
+            padding: 0.5rem;
+            width: 20%;
+
+            ul {
+               li {
+                  list-style-type: none;
+               }
+            }
+         }
+
+         .logo {
+            width: 40%;
+
+            p {
+               margin: 0.4rem 0;
+            }
+         }
+      }
+   }
+
+   .copyright {
+      border-top: 1px solid gray;
+      padding: $padding;
+      width: $width;
+
+      .copyrightText {
+         color: gray;
+      }
+      .terms {
+         text-transform: uppercase;
+
+         span:hover {
+            cursor: pointer;
+            text-decoration: underline;
+         }
+      }
+   }
 }
