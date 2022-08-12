@@ -1,15 +1,20 @@
 @import '../../styles/mixins';
 
+$transition-time: 0.5s;
+
 .menu {
    position: fixed;
-   padding: 2rem 20rem;
    display: flex;
    align-items: center;
    justify-content: flex-end;
    flex-direction: row;
-   width: 100%;
+   margin-top: 0;
+   padding: 2rem 0;
+   padding-right: 3rem;
+   width: 100vw;
 
-   z-index: 52;
+   transition: all $transition-time linear;
+   z-index: 10;
 
    li {
       color: $color4;
@@ -24,4 +29,9 @@
       background-color: $color5;
       color: $color2;
    }
+}
+
+.menu.active {
+   background-color: $color2;
+   transition: all $transition-time linear;
 }
