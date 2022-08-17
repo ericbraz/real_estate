@@ -1,8 +1,8 @@
-import { Fragment } from 'react'
+import React from 'react'
 
 interface FooterContent {
    title: string
-   list: JSX.Element[]
+   list: string[]
 }
 
 interface Props {
@@ -15,21 +15,11 @@ export default function FooterContent(props: Props) {
    const footerContent: FooterContent[] = [
       {
          title: 'Títutlo teste',
-         list: [
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-         ],
+         list: ['Apenas um teste', 'Apenas um teste', 'Apenas um teste', 'Apenas um teste'],
       },
       {
          title: 'Títutlo teste muito maior',
-         list: [
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-            <li>Apenas um teste</li>,
-         ],
+         list: ['Apenas um teste', 'Apenas um teste', 'Apenas um teste', 'Apenas um teste'],
       },
    ]
 
@@ -40,7 +30,7 @@ export default function FooterContent(props: Props) {
                <h4>{content.title}</h4>
                <ul>
                   {content.list.map((item, idx) => (
-                     <Fragment key={content.title + idx.toString()}>{item}</Fragment>
+                     <li key={content.title + idx.toString()}>{item}</li>
                   ))}
                </ul>
             </div>
