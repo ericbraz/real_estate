@@ -1,47 +1,40 @@
 import React from 'react'
 import styles from './Footer.module.scss'
+import FooterContent from './FooterContent'
 
 function Foot() {
    return (
       <footer className={styles.footer}>
          <div className={styles.container}>
-            <p>
+            <div>
                <div className={styles.logo}>
                   <h4>Logo component here</h4>
                   <p>lacus vestibulum sed arcu non odio euismod lacinia</p>
                   <p>ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus</p>
+                  <div className={styles.newsletter}>
+                     <p>NEWSLETTER</p>
+                     <p>
+                        <form>
+                           <input id='email' type='email' name='email' placeholder='Insert your best e-mail' required />
+                           <input id='button' type='button' value='Subscribe' />
+                        </form>
+                     </p>
+                  </div>
                </div>
-               <div>
-                  <h4>Apenas um teste</h4>
-                  <ul>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                  </ul>
+               <FooterContent styles={styles.listing} />
+               <div className={styles.contact}>
+                  <h4>
+                     Contato: <i>fictitious</i>
+                  </h4>
+                  <p>Telefone: (61) 3373-5060</p>
+                  <address>
+                     <p>SEPN 516, Conj D, Lote 09</p>
+                     <p>Edifício Via Universitas - 4º Andar</p>
+                     <p>Asa Norte, Brasília - DF</p>
+                     <p>CEP: 70770-524</p>
+                  </address>
                </div>
-               <div>
-                  <h4>Apenas um teste</h4>
-                  <ul>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                  </ul>
-               </div>
-               <div>
-                  <h4>Apenas um teste</h4>
-                  <ul>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                     <li>Apenas teste</li>
-                  </ul>
-               </div>
-            </p>
+            </div>
          </div>
          <div className={styles.copyright}>
             <p className={styles.copyrightText}>&copy; 2022 AEJ Incorporadora</p>
