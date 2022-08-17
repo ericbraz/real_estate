@@ -1,6 +1,106 @@
 @import '../../../styles/mixins';
 
+$padding: 1.5rem;
+$width: 100vw;
+$y-margin: 0.4rem;
+$x-margin: 8rem;
+
 .footer {
-   padding: 5rem 0;
+   background-color: #1f2024;
+   color: $color4;
+   padding: 0;
    @include layout;
+
+   p {
+      margin: $y-margin $x-margin;
+   }
+
+   .container {
+      padding: $padding;
+      width: $width;
+
+      > div {
+         display: flex;
+         align-items: flex-start;
+         justify-content: space-between;
+         margin: 0 $x-margin;
+
+         > div {
+            padding: 0.5rem;
+            width: 20%;
+
+            ul {
+               list-style: none;
+               padding: 0;
+
+               li {
+                  margin: 10px 0;
+               }
+            }
+         }
+
+         .logo {
+            width: 40%;
+         }
+         .logo,
+         .contact {
+            p {
+               margin: $y-margin 0;
+            }
+
+            .newsletter {
+               font-style: italic;
+               padding: 20px;
+               text-indent: 20px;
+               text-transform: uppercase;
+
+               input[type='email'],
+               input[type='button'] {
+                  font-size: 18px;
+                  padding: 8px 20px;
+               }
+               input[type='button'] {
+                  background-color: $color3;
+                  border: 1px solid $color3;
+                  color: $color4;
+               }
+            }
+         }
+
+         .listing,
+         .contact {
+            h4:before {
+               content: '';
+               position: absolute;
+               background: rgb(48, 113, 231);
+               background: linear-gradient(
+                  130deg,
+                  rgba(48, 113, 231, 1) 0%,
+                  rgba(166, 178, 236, 1) 100%
+               );
+               width: 150px;
+               height: 2px;
+               transform: translateY(30px);
+            }
+         }
+      }
+   }
+}
+
+.copyright {
+   border-top: 1px solid gray;
+   padding: $padding;
+   width: $width;
+
+   .copyrightText {
+      color: gray;
+   }
+   .terms {
+      text-transform: uppercase;
+
+      span:hover {
+         cursor: pointer;
+         text-decoration: underline;
+      }
+   }
 }
