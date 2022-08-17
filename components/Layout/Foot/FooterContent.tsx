@@ -34,7 +34,7 @@ export default function FooterContent(props: Props) {
    return (
       <>
          {footerContent.map((content) => (
-            <div className={styles}>
+            <div key={content.title} className={styles}>
                <h4>{content.title}</h4>
                <ul>{content.list.map((item) => item)}</ul>
             </div>
