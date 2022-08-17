@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 interface FooterContent {
    title: string
    list: JSX.Element[]
@@ -36,7 +38,11 @@ export default function FooterContent(props: Props) {
          {footerContent.map((content) => (
             <div key={content.title} className={styles}>
                <h4>{content.title}</h4>
-               <ul>{content.list.map((item) => item)}</ul>
+               <ul>
+                  {content.list.map((item, idx) => (
+                     <Fragment key={content.title + idx.toString()}>{item}</Fragment>
+                  ))}
+               </ul>
             </div>
          ))}
       </>

@@ -13,12 +13,12 @@ function Foot() {
                   <p>ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus</p>
                   <div className={styles.newsletter}>
                      <p>NEWSLETTER</p>
-                     <p>
+                     <div>
                         <form>
                            <input id='email' type='email' name='email' placeholder='Insert your best e-mail' required />
                            <input id='button' type='button' value='Subscribe' />
                         </form>
-                     </p>
+                     </div>
                   </div>
                </div>
                <FooterContent styles={styles.listing} />
