@@ -1,0 +1,25 @@
+@import '../../styles/mixins';
+
+.newsletter {
+   font-style: italic;
+   padding: 20px;
+   text-indent: 20px;
+   text-transform: uppercase;
+
+   .newsForm {
+      display: grid;
+      grid-gap: 0;
+      grid-template-columns: 50% 50%;
+
+      input[type='email'],
+      input[type='submit'] {
+         font-size: 18px;
+         padding: 8px 20px;
+      }
+      input[type='submit'] {
+         background-color: $color3;
+         border: 1px solid $color3;
+         color: $color4;
+      }
+   }
+}

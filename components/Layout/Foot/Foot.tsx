@@ -1,4 +1,5 @@
 import React from 'react'
+import Newsletter from '../../Newsletter/Newsletter'
 import styles from './Footer.module.scss'
 import FooterContent from './FooterContent'
 
@@ -11,15 +12,7 @@ function Foot() {
                   <h4>Logo component here</h4>
                   <p>lacus vestibulum sed arcu non odio euismod lacinia</p>
                   <p>ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus</p>
-                  <div className={styles.newsletter}>
-                     <p>NEWSLETTER</p>
-                     <div>
-                        <form>
-                           <input id='email' type='email' name='email' placeholder='Insert your best e-mail' required />
-                           <input id='button' type='button' value='Subscribe' />
-                        </form>
-                     </div>
-                  </div>
+                  <Newsletter inputText='Insert your best e-mail' />
                </div>
                <FooterContent styles={styles.listing} />
                <div className={styles.contact}>
