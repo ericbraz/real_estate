@@ -47,24 +47,6 @@ $x-margin: 8rem;
             p {
                margin: $y-margin 0;
             }
-
-            .newsletter {
-               font-style: italic;
-               padding: 20px;
-               text-indent: 20px;
-               text-transform: uppercase;
-
-               input[type='email'],
-               input[type='button'] {
-                  font-size: 18px;
-                  padding: 8px 20px;
-               }
-               input[type='button'] {
-                  background-color: $color3;
-                  border: 1px solid $color3;
-                  color: $color4;
-               }
-            }
          }
 
          .listing,
