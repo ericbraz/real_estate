@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+
+.logo {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+
+   div {
+    padding: 10px 3px;
+   }
+}

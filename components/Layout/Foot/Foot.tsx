@@ -1,4 +1,5 @@
 import React from 'react'
+import LogoComponent from '../../LogoComponent'
 import Newsletter from '../../Newsletter/Newsletter'
 import styles from './Footer.module.scss'
 import FooterContent from './FooterContent'
@@ -9,7 +10,7 @@ function Foot() {
          <div className={styles.container}>
             <div>
                <div className={styles.logo}>
-                  <h4>Logo component here</h4>
+                  <LogoComponent tag={'h4'} text={true} logoSize={30} />
                   <p>lacus vestibulum sed arcu non odio euismod lacinia</p>
                   <p>ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus</p>
                   <Newsletter inputText='Insert your best e-mail' />
