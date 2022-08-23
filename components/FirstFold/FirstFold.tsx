@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from './FirstFold.module.scss'
 import { TbArrowNarrowDown } from 'react-icons/tb'
+import { Typewriter } from 'react-simple-typewriter'
+//import 'react-simple-typewriter/dist/index.css'
 
 function FirstFold() {
    const [bouncer, setBouncer] = useState(styles.bouncer)
@@ -26,7 +28,23 @@ function FirstFold() {
                <div className={styles.rightDiv}>
                   <div className={styles.rightContent}>
                      <div className={styles.upperContent}>
-                        <h1>A Casa dos seus Sonhos pode estar em Qualquer Lugar.</h1>
+                        <h1>
+                           <span style={{ color: '#a6b2ec' }}>
+                              <Typewriter
+                                 cursor
+                                 cursorStyle='_'
+                                 typeSpeed={120}
+                                 deleteSpeed={50}
+                                 delaySpeed={2000}
+                                 words={[
+                                    'O seu investimento',
+                                    'A sua casa',
+                                    'A casa dos seus sonhos',
+                                 ]}
+                              />
+                           </span>{' '}
+                           pode estar em Qualquer Lugar.
+                        </h1>
                      </div>
                      <div className={styles.bottomContent}>
                         <div>
