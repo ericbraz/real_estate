@@ -2,6 +2,7 @@ import React from 'react'
 import { MENU_ITEMS } from '../../constants/topMenu'
 import FirstFold from '../FirstFold'
 import GallerySection from '../GallerySection'
+import NewsletterModal from '../NewsletterModal'
 import SmallAdvantageCards from '../SmallAdvantageCards'
 import styles from './IndexPage.module.scss'
 
@@ -10,6 +11,7 @@ function IndexPage() {
 
    return (
       <>
+         <NewsletterModal />
          <div id={t1.id} className={styles.background} style={{ position: 'absolute', top: 0 }}>
             <div className={styles.left}></div>
             <div className={styles.right}></div>
