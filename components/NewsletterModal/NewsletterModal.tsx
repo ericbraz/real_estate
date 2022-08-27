@@ -26,7 +26,6 @@ function NewsletterModal() {
    const inputs = {
       padding: '10px 0',
       width: '100%',
-      transform: 'translateX(-35px)'
    }
 
    const emailStyle = {
@@ -36,6 +35,8 @@ function NewsletterModal() {
    const submitStyle = {
       ...inputs,
    } as React.CSSProperties
+
+   const image = './assets/newsletter_modal/modern-apartment-architecture.jpg'
 
    return (
       <Modal
@@ -47,14 +48,18 @@ function NewsletterModal() {
          <div className={styles.content}>
             <div className={styles.left} style={{ height: height }}>
                <Newsletter
+                  tag='h3'
                   inputText='Deixe seu melhor e-mail'
-                  callToAction='Espera! Não vá embora antes de me dar um chá de cadeira hehe'
+                  callToAction='Espere! Não vá embora. Que tal receber a lista das melhores oportunidades de negócios?'
                   formStyle={formStyle}
                   emailStyle={emailStyle}
                   submitStyle={submitStyle}
                />
             </div>
-            <div className={styles.right} style={{ height: height }}></div>
+            <div
+               className={styles.right}
+               style={{ background: `url(${image}) center`, backgroundSize: 'cover', height: height }}
+            ></div>
          </div>
       </Modal>
    )

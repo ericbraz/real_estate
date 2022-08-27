@@ -12,7 +12,7 @@ function Foot() {
                   <h4>Logo component here</h4>
                   <p>lacus vestibulum sed arcu non odio euismod lacinia</p>
                   <p>ultricies tristique nulla aliquet enim tortor at auctor urna nunc id cursus</p>
-                  <Newsletter inputText='Insert your best e-mail' />
+                  <Newsletter tag='p' inputText='Insert your best e-mail' />
                </div>
                <FooterContent styles={styles.listing} />
                <div className={styles.contact}>

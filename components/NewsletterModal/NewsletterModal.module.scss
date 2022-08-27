@@ -5,8 +5,8 @@
    display: flex;
    z-index: 350;
 
-   div {
-      padding: 3rem;
+   > div {
+      padding: 3rem 5rem;
       width: 50%;
    }
    .left {

@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
    const [actionable, setActionable] = useState(false)
 
    useEffect(() => {
-      setTimeout(() => setActionable(true), 10000)
+      setTimeout(() => setActionable(true), 20000)
    }, [])
 
    return (
