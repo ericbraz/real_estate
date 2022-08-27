@@ -1,18 +1,20 @@
 @import '../../styles/mixins';
 
 .newsletter {
-   font-style: italic;
-   padding: 20px;
-   text-indent: 20px;
-   text-transform: uppercase;
+   p{
+      display: block;
+   }
 
    .newsForm {
       display: grid;
       grid-gap: 0;
       grid-template-columns: 50% 50%;
+      padding: 20px;
+      text-indent: 20px;
 
       input[type='email'],
       input[type='submit'] {
+         border-radius: 8px;
          font-size: 18px;
          padding: 8px 20px;
       }
